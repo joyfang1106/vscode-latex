@@ -1,0 +1,181 @@
+{
+    "window.zoomLevel": 2,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "terminal.integrated.inheritEnv": false,
+    "python.pythonPath": "/Users/mac/opt/anaconda3/envs/dlenv/bin/python",
+    "python.autoComplete.extraPaths": [
+
+    "/Users/mac/opt/anaconda3/pkgs/"
+
+    ],
+    "python.autoComplete.addBrackets": true,
+    "python.jediEnabled": false,
+    "python.languageServer": "Microsoft",
+    "workbench.colorTheme": "Monokai Pro",
+    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.sideBar.location": "left",
+    "git.ignoreLegacyWarning": true,
+    "files.associations": {
+        "*.rmd": "markdown"
+    },
+    "editor.minimap.enabled": false,
+
+    // settings of latex
+    /////////////////////
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "PDFLaTeX",
+            "tools": ["pdflatex"]
+        },
+        
+        {
+            "name": "PDFLaTeX with Shell Escape",
+            "tools": ["pdflatex-with-shell-escape"]
+        },
+
+        {
+            "name": "XeLaTeX",
+            "tools": ["xelatex"]
+        },
+    
+        {
+            "name": "XeLaTeX with Shell Escape",
+            "tools": ["xelatex-with-shell-escape"]
+        },
+        
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+        },
+        
+        {
+            "name": "xelatex -> bibtex -> xelatex*2",
+            "tools": ["xelatex", "bibtex", "xelatex", "xelatex"]
+        },
+        
+        {
+            "name": "LaTeXmk",
+            "tools": ["latexmk"]
+        },
+        
+        {
+            "name": "BibTeX",
+            "tools": ["bibtex"]
+        }
+        
+    ],
+        
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        
+        {
+            "name": "pdflatex-with-shell-escape",
+            "command": "pdflatex",
+            "args": [
+                "--shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+
+        {
+            "name": "xelatex-with-shell-escape",
+            "command": "xelatex",
+            "args": [
+                "--shell-escape",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": ["%DOCFILE%"],
+            "env": {}
+        }
+        
+    ],
+
+    
+    "latex-workshop.latex.clean.fileTypes": [  //设定清理文件的类型  
+        "*.aux",
+        "*.bbl",  
+        "*.blg",  
+        "*.idx",  
+        "*.ind",  
+        "*.lof",  
+        "*.lot",  
+        "*.out",  
+        "*.toc",  
+        "*.acn",  
+        "*.acr",  
+        "*.alg",  
+        "*.glg",
+        "*.glo",  
+        "*.gls",  
+        "*.ist",  
+        "*.fls",  
+        "*.log",  
+        "*.fdb_latexmk",  
+        "*.nav",  
+        "*.snm",  
+        //"*.synctex.gz"  
+    ], 
+    
+    //////////////////////
+    
+    "latex-workshop.view.pdf.viewer": "tab", 
+    "security.workspace.trust.untrustedFiles": "open",
+    "latex-workshop.latex.autoBuild.run": "never", // 不自动编译
+    "latex-workshop.intellisense.package.enabled": true, //根据加载的包，自动完成命令或包 
+    "latex-workshop.showContextMenu": true, //右键菜单
+    // settings of latex
+
+    "editor.wordWrap": "on", // 自动换行
+    
+}
