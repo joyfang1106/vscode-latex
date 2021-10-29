@@ -1,3 +1,5 @@
+// Command+Shift+P open 'settings.json'
+
 {
     "window.zoomLevel": 2,
     "workbench.editorAssociations": {
