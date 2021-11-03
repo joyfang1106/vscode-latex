@@ -28,6 +28,11 @@
     /////////////////////
     "latex-workshop.latex.recipes": [
         {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+        }, // this have to be first, otherwise cannot compile bibtex
+        
+        {
             "name": "PDFLaTeX",
             "tools": ["pdflatex"]
         },
@@ -47,10 +52,6 @@
             "tools": ["xelatex-with-shell-escape"]
         },
         
-        {
-            "name": "pdflatex -> bibtex -> pdflatex*2",
-            "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
-        },
         
         {
             "name": "xelatex -> bibtex -> xelatex*2",
