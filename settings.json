@@ -1,29 +1,73 @@
 // Command+Shift+P open 'settings.json'
 
 {
-    "window.zoomLevel": 2,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
-    "terminal.integrated.inheritEnv": false,
-    "python.pythonPath": "/Users/mac/opt/anaconda3/envs/dlenv/bin/python",
-    "python.autoComplete.extraPaths": [
-
-    "/Users/mac/opt/anaconda3/pkgs/"
-
-    ],
-    "python.autoComplete.addBrackets": true,
-    "python.jediEnabled": false,
-    "python.languageServer": "Microsoft",
     "workbench.colorTheme": "Monokai Pro",
+    "editor.fontSize": 16,
     "workbench.iconTheme": "vscode-great-icons",
+    "window.zoomLevel": 2,
+    "editor.wordWrap": "on", // 自动换行
+    // "python.autoComplete.extraPaths": [
+    // ]
+    "python.autoComplete.addBrackets": true,
+    "editor.fontLigatures": false,
+
+    "terminal.integrated.inheritEnv": false,
+
+    // /Users/joyfang1106/opt/anaconda3/envs/pytorch1.8/bin/python3.7
+    // "python.defaultInterpreterPath": "/opt/anaconda3/envs/pytorch18/bin/python",
+    "python.defaultInterpreterPath": "/opt/anaconda3/envs/pytorch1.8/bin/python",
+    
+    "editor.tokenColorCustomizations": {
+        // "comments": "#17e917",
+        // "keywords": "#c8d03b", "#ffd866",
+        "[Monokai Pro]":{
+            "textMateRules": [
+                {
+                    "scope": [
+                        "comment",
+                        "punctuation.definition.comment",
+                        "string.comment",
+                        "comment markup.underline.link","comment string","comment punctuation.definition","comment punctuation","comment text"
+                    ],
+                    "settings": {
+                        "foreground": "#6a737d"
+                    }
+                },
+
+                {
+                    "scope": [
+                        "punctuation.definition.string",
+                        "string punctuation.section.embedded source"
+                    ],
+                    "settings": {
+                        "foreground": "#9ecbff"
+                    }
+                },
+  
+                {"scope":["string.quoted.docstring","string.quoted.docstring punctuation.definition"],"settings":{"foreground":"#9ecbff"}}
+            ]
+        }
+    },
+
+    // "workbench.editorAssociations": {
+        // "*.ipynb": "jupyter-notebook"
+    // },
+    // "python.pythonPath": "/Users/mac/opt/anaconda3/envs/dlenv/bin/python",
+    // "python.autoComplete.extraPaths": [
+
+    // "/Users/mac/opt/anaconda3/pkgs/"
+
+    // ],
+
+    "python.jediEnabled": false,
+    // "python.languageServer": "Microsoft",
     "workbench.sideBar.location": "left",
     "git.ignoreLegacyWarning": true,
     "files.associations": {
-        "*.rmd": "markdown"
+        "*.rmd": "markdown",
+        "*.md": "markdown"
     },
-    "editor.minimap.enabled": false,
-
+    
     // settings of latex
     /////////////////////
     "latex-workshop.latex.recipes": [
@@ -51,7 +95,6 @@
             "name": "XeLaTeX with Shell Escape",
             "tools": ["xelatex-with-shell-escape"]
         },
-        
         
         {
             "name": "xelatex -> bibtex -> xelatex*2",
@@ -167,18 +210,46 @@
         "*.fdb_latexmk",  
         "*.nav",  
         "*.snm",  
-        //"*.synctex.gz"  
+        "*.synctex.gz"  
     ], 
     
     //////////////////////
-    
     "latex-workshop.view.pdf.viewer": "tab", 
     "security.workspace.trust.untrustedFiles": "open",
-    "latex-workshop.latex.autoBuild.run": "never", // 不自动编译
+    "latex-workshop.latex.autoBuild.run": "onSave", 
+    // 1. onFileChange: 实时编译
+    // 2. onSave: 保存时编译
+    // 3. never: 手动编译, 不自动编译
     "latex-workshop.intellisense.package.enabled": true, //根据加载的包，自动完成命令或包 
-    "latex-workshop.showContextMenu": true, //右键菜单
-    // settings of latex
+    "latex-workshop.showContextMenu": true,
+    "latex-workshop.message.error.show": false,
+    "latex-workshop.message.warning.show": false,
 
-    "editor.wordWrap": "on", // 自动换行
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    // "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click", 
+
+    "kite.showWelcomeNotificationOnStartup": false,
+    "python.analysis.completeFunctionParens": true,
+    "python.languageServer": "Default",
+    "editor.minimap.enabled": false, //右键菜单
+    // settings of latex
     
+    "workbench.editorAssociations": {
+        //"*.md": "default"
+        "*.csv": "default"
+    },
+    "python.linting.pylintCategorySeverity.convention": "Hint",
+    "python.linting.pylintCategorySeverity.error": "Hint",
+    "python.linting.pylintCategorySeverity.fatal": "Hint",
+    "python.linting.pylintCategorySeverity.warning": "Hint",
+    "markdown.preview.breaks": true,
+    "markdown.preview.fontSize": 16,
+    "merge-conflict.autoNavigateNextConflict.enabled": true,
+    // "python.defaultInterpreterPath": ""
+
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4, //vscode设置的缩进量
+    "editor.formatOnSave": false, //保存时候自动格式化，不建议设置。我在这里设置为false
+
 }
