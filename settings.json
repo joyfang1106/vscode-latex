@@ -2,8 +2,8 @@
 
 {
     "workbench.colorTheme": "Monokai Pro",
-    "editor.fontSize": 16,
     "workbench.iconTheme": "vscode-great-icons",
+    "editor.fontSize": 16,
     "window.zoomLevel": 2,
     "editor.wordWrap": "on", // 自动换行
     // "python.autoComplete.extraPaths": [
